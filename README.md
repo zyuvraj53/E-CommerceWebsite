@@ -1,3 +1,10 @@
+-> Product Cataloguing will be in detail and on the homepage.
+-> The homepage is to have infinite scroll feature
+-> Stock Tracking and Order fulfillment will be modals.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
