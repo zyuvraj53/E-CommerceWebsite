@@ -1,4 +1,4 @@
-import logo from "../logo.svg";
+import logo from "../cart.svg";
 import { useState } from "react";
 import OrderFulfillmentModal from "./OrderFulfillmentModal";
 
