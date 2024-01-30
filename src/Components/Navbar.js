@@ -9,7 +9,7 @@ export default function Navbar() {
     useState(false);
 
   return (
-    <nav className="nav bg-[#333] flex text-white justify-between px-4 py-0">
+    <nav className="nav bg-[#333] flex text-white sticky justify-between px-4 py-0">
       <div className="gap-8">
         <ul className="flex justify-between p-0 m-0 list-none gap-4">
           <li>
