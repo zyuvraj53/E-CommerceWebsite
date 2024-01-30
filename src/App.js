@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './Components/Navbar';
+import Cards from './Components/Cards'
 
 function App() {
   return (
@@ -7,6 +8,9 @@ function App() {
       <header className="App-header">
         <Navbar/>
       </header>
+      <body>
+        <Cards/>
+      </body>
     </div>
   );
 }
