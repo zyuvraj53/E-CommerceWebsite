@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import Cards from "./Components/Cards";
 import ProductPage from "./ProductPage";
+import Home from "./Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -14,9 +14,7 @@ function App() {
         <body>
           <Switch>
             <Route exact path="/">
-              <a href="/ProductPage">
-                <Cards image altText productDetails/>
-              </a>
+              <Home></Home>
             </Route>
             <Route exact path="/ProductPage">
               <ProductPage></ProductPage>
