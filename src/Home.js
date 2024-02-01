@@ -7,7 +7,19 @@ function Home() {
       <div className="Home">
         <header className="Home-header">
         </header>
-        <body>
+        <body className="text-center">
+              <a href="/ProductPage">
+                <Cards image altText productDetails/>
+              </a>
+              <a href="/ProductPage">
+                <Cards image altText productDetails/>
+              </a>
+              <a href="/ProductPage">
+                <Cards image altText productDetails/>
+              </a>
+              <a href="/ProductPage">
+                <Cards image altText productDetails/>
+              </a>
               <a href="/ProductPage">
                 <Cards image altText productDetails/>
               </a>
