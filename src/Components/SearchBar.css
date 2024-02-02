@@ -1,0 +1,31 @@
+.search{
+    outline: none;
+    border: none;
+}
+.search_bar {
+    width: 33vh;
+    background-color: rgba(214, 205, 205, 0.129);
+    border: 1px solid white;
+    color: white;
+    padding-left: 1vh;
+    height: 4vh;
+    border-radius: 10px;
+    font-size: 2vh;
+    outline: none;
+}
+
+.search_icon {
+    display: none;
+}
+
+@media (max-width: 840px) {
+    .search_bar {
+        display: none;
+    }
+
+    .search_icon {
+        display: block;
+        cursor: pointer;
+    }
+
+}
