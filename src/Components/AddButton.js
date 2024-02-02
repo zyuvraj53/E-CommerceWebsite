@@ -1,3 +1,5 @@
+import './AddButton.css'
+
 import React, { useState } from "react";
 
 export default function AddButton() {
@@ -26,8 +28,8 @@ export default function AddButton() {
   return (
     <div>
       {buttonVisible && (
-        <div>
-          <button onClick={incrementCount}> Add </button>
+        <div className="bg-[#cbb546dd] rounded-[8px] shadow-[2px_2px_2px_2px_rgba(0,0,0,0.1)] clicked">
+          <button onClick={incrementCount} className="AddButton "> Add </button>
         </div>
       )}
 
