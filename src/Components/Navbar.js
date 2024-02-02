@@ -3,6 +3,7 @@ import { useState } from "react";
 import OrderFulfillmentModal from "./OrderFulfillmentModal";
 import "./Navbar.css";
 import StockTrackingModal from "./StockTrackingModal";
+import SearchBar from "./SearchBar";
 
 export default function Navbar() {
   const [openOrderFulfillmentModal, setOpenOrderFulfillmentModal] =
@@ -31,6 +32,9 @@ export default function Navbar() {
               </a>
             </li>
           </ul>
+        </div>
+        <div className="SearchBar">
+          <SearchBar />
         </div>
         <div className="text-inherit gap-8">
           <ul className="flex justify-between p-0 min-[528px]:pt-2 m-0 list-none gap-4 font-bold font-['Arial'] modalsList">
