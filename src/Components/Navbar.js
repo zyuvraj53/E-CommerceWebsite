@@ -2,6 +2,7 @@ import logo from "../cart.svg";
 import { useState } from "react";
 import OrderFulfillmentModal from "./OrderFulfillmentModal";
 import "./Navbar.css";
+import StockTrackingModal from "./StockTrackingModal";
 
 export default function Navbar() {
   const [openOrderFulfillmentModal, setOpenOrderFulfillmentModal] =
@@ -138,7 +139,7 @@ export default function Navbar() {
                   Stock Tracking
                 </button>
                 {openStockTrackingModal && (
-                  <OrderFulfillmentModal closeModal={setStockTrackingModal} />
+                  <StockTrackingModal closeModal={setStockTrackingModal} />
                 )}
               </li>
             </ul>
