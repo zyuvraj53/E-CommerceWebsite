@@ -1,6 +1,4 @@
-import Navbar from "./Components/Navbar";
 import Cards from "./Components/Cards";
-import ProductPage from "./ProductPage";
 
 function Home() {
   return (
@@ -8,21 +6,11 @@ function Home() {
         <header className="Home-header">
         </header>
         <body className="text-center">
-              <a href="/ProductPage">
-                <Cards image altText productDetails/>
-              </a>
-              <a href="/ProductPage">
-                <Cards image altText productDetails/>
-              </a>
-              <a href="/ProductPage">
-                <Cards image altText productDetails/>
-              </a>
-              <a href="/ProductPage">
-                <Cards image altText productDetails/>
-              </a>
-              <a href="/ProductPage">
-                <Cards image altText productDetails/>
-              </a>
+                <Cards link={ "/ProductPage" } image altText productDetails/>
+                <Cards link={ "/ProductPage" } image altText productDetails/>
+                <Cards link={ "/ProductPage" } image altText productDetails/>
+                <Cards link={ "/ProductPage" } image altText productDetails/>
+                <Cards link={ "/ProductPage" } image altText productDetails/>
         </body>
       </div>
   );
