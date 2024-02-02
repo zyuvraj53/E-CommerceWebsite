@@ -6,10 +6,10 @@
   background: #0e79cb;
   border-radius: 4px;
   transition: .5s;
+  padding: 5px;
 }
 
 li.active, .modal:hover {
-  box-shadow: 3px 3px 1px 1px #424242;
   background: #06518a;
   transition: .5s;
   border-radius: 0.375rem;
@@ -20,4 +20,37 @@ li.active, .modal:hover {
     display: none;
   }
 
+}
+
+
+.main_box {
+  position: absolute;
+  width: 100%;
+}
+
+.sidebar_menu .menu {
+  position: absolute;
+  top: 4px;
+  width: 100%;
+}
+
+.sidebar_menu .menu li {
+  padding: 14px 20px;
+  color: white;
+}
+
+.menu li:hover {
+  border-left: 2px solid #fff;
+  box-shadow: 0 0 4px hsla(0, 0%, 100%, 0.5);
+}
+
+.main_box .sidebar_menu {
+  background-color: hsla(0, 0%, 7%, 0.835);
+  height: 100vh;
+  position: fixed;
+  left: -280px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  width: 280px;
+  z-index: 1;
 }

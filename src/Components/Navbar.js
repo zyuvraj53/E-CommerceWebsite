@@ -4,22 +4,26 @@ import OrderFulfillmentModal from "./OrderFulfillmentModal";
 import "./Navbar.css";
 import StockTrackingModal from "./StockTrackingModal";
 import SearchBar from "./SearchBar";
+import Menu from "../Assets/menu-fill.png";
+import Close from "../Assets/close-fill.png";
 
 export default function Navbar() {
   const [openOrderFulfillmentModal, setOpenOrderFulfillmentModal] =
     useState(false);
   const [openStockTrackingModal, setStockTrackingModal] = useState(false);
-  const [sidenavOpen, setSidenavOpen] = useState(false);
+  const [sidepanel, setsidepanel] = useState(false);
+  const toggle = () => {
+    setsidepanel(!sidepanel);
+  };
   return (
-    <div>
-      <nav className="nav bg-[#0082e6] flex text-white justify-between px-4 py-0 backdrop-blur">
-        <div className="gap-8">
-          <ul className="flex justify-between p-0 m-0 list-none gap-4">
+    <>
+      <nav className="bg-[#121212d5] flex border border-none	 text-white items-center justify-between h-14">
+        <div>
+          <ul className="flex justify-center items-center gap-6 w-60">
             <li>
               <a href="/">
-                <img
-                  src={logo}
-                  className="min-[454px]:min-w-10 py-1 max-[415px]:translate-y-1/5 "
+                <img src={logo}
+                  className="min-[454px]:min-w-10 max-[415px]:translate-y-1/5 "
                   alt="logo"
                   height={25}
                   width={25}
@@ -36,8 +40,8 @@ export default function Navbar() {
         <div className="SearchBar">
           <SearchBar />
         </div>
-        <div className="text-inherit gap-8">
-          <ul className="flex justify-between p-0 min-[528px]:pt-2 m-0 list-none gap-4 font-bold font-['Arial'] modalsList">
+        <div className="">
+          <ul className="justify-center items-center gap-4 md:mr-4 hidden lg:flex">
             <li className="">
               {" "}
               {/* added a CSS class active*/}
@@ -70,27 +74,42 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <button
-          onClick={() => setSidenavOpen(true)}
-          className="block md:hidden text-white"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="w-6 h-6 hamburger"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button>
+        <div className='side_button block md:hidden'>
+          <img src={!sidepanel ? Menu : Close} alt="Button" onClick={toggle} />
+        </div>
       </nav>
-      {sidenavOpen && (
+
+      <div className='main_box'>
+        <div className="sidebar_menu" style={{ left: sidepanel ? "0px" : "-280px" }}>
+          <ul className="menu" >
+            <li>
+              <button
+                onClick={() => {
+                  setOpenOrderFulfillmentModal(true);
+                }}
+              >
+                Order Fulfillment
+              </button>
+              {openOrderFulfillmentModal && (
+                <OrderFulfillmentModal
+                  closeModal={setOpenOrderFulfillmentModal}
+                />
+              )}
+            </li>
+            <li><button
+              onClick={() => {
+                setStockTrackingModal(true);
+              }}
+            >
+              Stock Tracking
+            </button>
+              {openStockTrackingModal && (
+                <StockTrackingModal closeModal={setStockTrackingModal} />
+              )}</li>
+          </ul>
+        </div>
+      </div>
+      {/* {sidenavOpen && (
         <div className="fixed inset-0 bg-[#ba9c65ec] z-30 max-h-60 translate-y-3 rounded-xl m-2">
           <div className="flex items-center justify-between px-6 h-20">
             <div>
@@ -115,40 +134,40 @@ export default function Navbar() {
               </button>
             </div>
           </div>
-            <ul className="justify-between p-4 min-[528px]:pt-2 m-0 list-none font-bold font-['Arial']">
-              <li className="p-4 text-center">
-                {" "}
-                {/* added a CSS class active*/}
-                <button
-                  className="OrderFulfillModal modal"
-                  onClick={() => {
-                    setOpenOrderFulfillmentModal(true);
-                  }}
-                >
-                  Order Fulfillment
-                </button>
-                {openOrderFulfillmentModal && (
-                  <OrderFulfillmentModal
-                    closeModal={setOpenOrderFulfillmentModal}
-                  />
-                )}
-              </li>
-              <li className="p-4 text-center">
-                <button
-                  className="StockTrackingModal modal"
-                  onClick={() => {
-                    setStockTrackingModal(true);
-                  }}
-                >
-                  Stock Tracking
-                </button>
-                {openStockTrackingModal && (
-                  <StockTrackingModal closeModal={setStockTrackingModal} />
-                )}
-              </li>
-            </ul>
+          <ul className="justify-between p-4 min-[528px]:pt-2 m-0 list-none font-bold font-['Arial']">
+            <li className="p-4 text-center">
+              {" "}
+              {/* added a CSS class active}
+              <button
+                className="OrderFulfillModal modal"
+                onClick={() => {
+                  setOpenOrderFulfillmentModal(true);
+                }}
+              >
+                Order Fulfillment
+              </button>
+              {openOrderFulfillmentModal && (
+                <OrderFulfillmentModal
+                  closeModal={setOpenOrderFulfillmentModal}
+                />
+              )}
+            </li>
+            <li className="p-4 text-center">
+              <button
+                className="StockTrackingModal modal"
+                onClick={() => {
+                  setStockTrackingModal(true);
+                }}
+              >
+                Stock Tracking
+              </button>
+              {openStockTrackingModal && (
+                <StockTrackingModal closeModal={setStockTrackingModal} />
+              )}
+            </li>
+          </ul>
         </div>
-      )}
-    </div>
+      )} */}
+    </>
   );
 }
