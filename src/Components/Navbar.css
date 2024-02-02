@@ -1,0 +1,23 @@
+/* Just some more styling */
+
+.modal {
+  text-transform: uppercase;
+  padding: 4px;
+  background: #0e79cb;
+  border-radius: 4px;
+  transition: .5s;
+}
+
+li.active, .modal:hover {
+  box-shadow: 3px 3px 1px 1px #424242;
+  background: #06518a;
+  transition: .5s;
+  border-radius: 0.375rem;
+}
+
+@media (max-width: 480px) {
+  .modalsList{
+    display: none;
+  }
+
+}

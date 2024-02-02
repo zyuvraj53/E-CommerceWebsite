@@ -1,0 +1,9 @@
+/* Just some more styling */
+
+.card {
+  transition: .5s;
+}
+
+.card:hover {
+  transition: .5s;
+}
