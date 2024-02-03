@@ -1,4 +1,4 @@
-import './AddButton.css'
+import "./AddButton.css";
 
 import React, { useState } from "react";
 
@@ -15,11 +15,14 @@ export default function AddButton() {
 
   function decrementCount() {
     setState(prevState => {
-      if (prevState.count > 0) 
-        if(prevState.count === 1){
-        return { count: prevState.count - 1, buttonVisible: !prevState.buttonVisible };
-        }else{
-        return { count: prevState.count - 1 };
+      if (prevState.count > 0)
+        if (prevState.count === 1) {
+          return {
+            count: prevState.count - 1,
+            buttonVisible: !prevState.buttonVisible,
+          };
+        } else {
+          return { count: prevState.count - 1 };
         }
       else return { count: prevState.count };
     });
@@ -29,15 +32,24 @@ export default function AddButton() {
     <div>
       {buttonVisible && (
         <div className="bg-[#cbb546dd] rounded-[8px] shadow-[2px_2px_2px_2px_rgba(0,0,0,0.1)] clicked">
-          <button onClick={incrementCount} className="AddButton "> Add </button>
+          <button onClick={incrementCount} className="AddButton ">
+            {" "}
+            Add{" "}
+          </button>
         </div>
       )}
 
       {!buttonVisible && (
         <div>
-          <button onClick={decrementCount}>-</button>
-          <span>{count}</span>
-          <button onClick={incrementCount}>+</button>
+          <div className="">
+            <button onClick={decrementCount}>-</button>
+          </div>
+          <div className="">
+            <span>{count}</span>
+          </div>
+          <div className="">
+            <button onClick={incrementCount}>+</button>
+          </div>
         </div>
       )}
     </div>

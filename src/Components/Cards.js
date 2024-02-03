@@ -1,4 +1,4 @@
-import profilePic from "../Assets/profile.avif";
+import profilePic from "../Assets/missing_picture.avif";
 import "./Cards.css";
 import AddButton from "./AddButton";
 
