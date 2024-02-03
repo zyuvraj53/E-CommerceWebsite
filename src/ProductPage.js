@@ -1,19 +1,20 @@
-import Navbar from './Components/Navbar';
+import Navbar from "./Components/Navbar";
+import profilePic from "./Assets/missing_picture.avif";
+import AddButton from "./Components/AddButton";
 
-
-function ProductPage({image, altText, productDetails}) {
+function ProductPage({ image, altText, productDetails }) {
   return (
     <div className="Product">
-      <header className="Product-header">
-      </header>
-      <body className="flex justify-between">
+      <header className="Product-header"></header>
+      <body className="flex justify-around">
         <div>
-        <img src={image} alt={altText} className="m-2 p-2"/>
+          <img src={profilePic} alt={altText} className="m-2 p-2" />
         </div>
-        <div className="m-2 p-2">
-          <h1>{productDetails} This is the heading </h1>
-          <p>{productDetails} This is the product price </p>
+        <div className="flex flex-col m-2 p-2">
+          <h1 className="text-2xl">{productDetails} This is the heading </h1>
+          <p className="text-lg">{productDetails} This is the product price </p>
           {/* some more info */}
+          <AddButton/>
         </div>
       </body>
     </div>

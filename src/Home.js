@@ -5,7 +5,7 @@ function Home() {
       <div className="Home">
         <header className="Home-header">
         </header>
-        <body className="text-center">
+        <body className="flex justify-around">
                 <Cards link={ "/ProductPage" } image altText productDetails/>
                 <Cards link={ "/ProductPage" } image altText productDetails/>
                 <Cards link={ "/ProductPage" } image altText productDetails/>

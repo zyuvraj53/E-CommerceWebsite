@@ -29,9 +29,9 @@ export default function AddButton() {
   }
 
   return (
-    <div>
+    <div className="">
       {buttonVisible && (
-        <div className="bg-[#cbb546dd] rounded-[8px] shadow-[2px_2px_2px_2px_rgba(0,0,0,0.1)] clicked">
+        <div className="bg-[#cbb546dd] rounded-[8px] shadow-[2px_2px_2px_2px_rgba(0,0,0,0.1)] clicked flex justify-center">
           <button onClick={incrementCount} className="AddButton ">
             {" "}
             Add{" "}
@@ -40,14 +40,14 @@ export default function AddButton() {
       )}
 
       {!buttonVisible && (
-        <div>
-          <div className="">
+        <div className="flex flex-row justify-center gap-2">
+          <div className="px-2 border-2 border-[#444746] bg-yellow-500 rounded-xl">
             <button onClick={decrementCount}>-</button>
           </div>
-          <div className="">
+          <div className="px-3 border-2 border-[#444746] rounded-xl">
             <span>{count}</span>
           </div>
-          <div className="">
+          <div className="px-2 border-2 border-[#444746] bg-yellow-500 rounded-xl">
             <button onClick={incrementCount}>+</button>
           </div>
         </div>
