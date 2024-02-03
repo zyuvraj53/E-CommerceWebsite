@@ -69,7 +69,7 @@ export default function Navbar() {
                 Stock Tracking
               </button>
               {openStockTrackingModal && (
-                <OrderFulfillmentModal closeModal={setStockTrackingModal} />
+                <StockTrackingModal closeModal={setStockTrackingModal} />
               )}
             </li>
           </ul>
